@@ -20,18 +20,22 @@ INSERT INTO authorities (name, endpoint) values ('Authority_Update', 'PUT:/api/a
 INSERT INTO authorities (name, endpoint) values ('Authority_PartialUpdate', 'PATCH:/api/authority/{id}/');
 INSERT INTO authorities (name, endpoint) values ('AuthorityByUser_Read', 'GET:/api/authority/byuser/{id}/');
 
-INSERT INTO authorities (name, endpoint) values ('Request_Write', 'POST:/api/request/');
-INSERT INTO authorities (name, endpoint) values ('Request_Read', 'GET:/api/request/');
-INSERT INTO authorities (name, endpoint) values ('RequestById_Read', 'GET:/api/request/{id}/');
-INSERT INTO authorities (name, endpoint) values ('Request_Delete', 'DELETE:/api/request/{id}/');
-INSERT INTO authorities (name, endpoint) values ('Request_Update', 'PUT:/api/request/{id}/');
-INSERT INTO authorities (name, endpoint) values ('Request_PartialUpdate', 'PATCH:/api/request/{id}/');
+INSERT INTO authorities (name, endpoint) values ('Request_write', 'POST:/api/request/');
+INSERT INTO authorities (name, endpoint) values ('Request_read', 'GET:/api/request/');
+INSERT INTO authorities (name, endpoint) values ('RequestById_read', 'GET:/api/request/{id}/');
+INSERT INTO authorities (name, endpoint) values ('Request_delete', 'DELETE:/api/request/{id}/');
+INSERT INTO authorities (name, endpoint) values ('Request_update', 'PUT:/api/request/{id}/');
+INSERT INTO authorities (name, endpoint) values ('Request_partialUpdate', 'PATCH:/api/request/{id}/');
 
+INSERT INTO authorities (name, endpoint) values ('AnteProjectPdf_write', 'POST:/api/AnteProjectPdf/write/');
 INSERT INTO authorities (name, endpoint) values ('AnteProjectPdf_download', 'GET:/api/anteProjectPdf/{id}/');
-INSERT INTO authorities (name, endpoint) values ('AnteProjectPdf_upload', 'POST:/api/anteProjectPdf/');
+INSERT INTO authorities (name, endpoint) values ('AnteProjectPdf_upload', 'POST:/api/anteProjectPdf/upload/');
 
+INSERT INTO authorities (name, endpoint) values ('RequestPdf_write', 'POST:/api/requestPdf/write/');
 INSERT INTO authorities (name, endpoint) values ('RequestPdf_download', 'GET:/api/requestPdf/{id}/');
-INSERT INTO authorities (name, endpoint) values ('RequestPdf_upload', 'POST:/api/requestPdf/');
+INSERT INTO authorities (name, endpoint) values ('RequestPdf_upload', 'POST:/api/requestPdf/RequestPdf/upload/');
+
+
 
 
 
@@ -73,6 +77,7 @@ INSERT INTO users_roles (user_id, role_id) VALUES ((SELECT id FROM users where u
 --             {"id": 28}
 --         ]
 -- }
+
 
 
 -- {
